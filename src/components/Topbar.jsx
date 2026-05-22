@@ -16,13 +16,11 @@ export default function Topbar({ pageTitle, mqttStatus, onConnect, onDisconnect,
       </div>
 
       <div className="topbar-right">
-        {/* Status MQTT */}
         <div className="mqtt-status">
           <span className="mqtt-dot" style={{ background: s.color }} />
           <span className="mqtt-label" style={{ color: s.color }}>{s.label}</span>
         </div>
 
-        {/* Botão conectar/desconectar */}
         <button
           className={`btn-sm ${isConnected ? 'btn-sm--ghost' : 'btn-sm--primary'}`}
           onClick={isConnected ? onDisconnect : onConnect}

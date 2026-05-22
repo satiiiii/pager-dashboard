@@ -31,7 +31,7 @@ export default function PedidoCard({ pedido, onAcionar, onDesligar, mqttConnecte
           disabled={!mqttConnected}
           title={!mqttConnected ? 'Conecte ao MQTT primeiro' : ''}
         >
-          ACIONAR
+          MARCAR COMO PRONTO
         </button>
         <button
           className="btn-ghost btn-desligar"

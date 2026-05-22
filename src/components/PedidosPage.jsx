@@ -32,12 +32,7 @@ export default function PedidosPage({ publish, mqttConnected }) {
     e.preventDefault()
     if (!novoPedido.trim()) return
     const numero = String(pedidos.length + 1).padStart(3, '0')
-    setPedidos(p => [...p, {
-      id: Date.now(),
-      numero,
-      status: 'Aguardando',
-      descricao: novoPedido.trim(),
-    }])
+    setPedidos(p => [...p, { id: Date.now(), numero, status: 'Aguardando', descricao: novoPedido.trim() }])
     setNovoPedido('')
   }
 
@@ -49,14 +44,8 @@ export default function PedidosPage({ publish, mqttConnected }) {
           <p className="page-sub">{pedidos.length} pedido(s) no momento</p>
         </div>
 
-        {/* Formulário rápido de novo pedido */}
         <form onSubmit={adicionarPedido} className="novo-pedido-form">
-          <input
-            className="novo-pedido-input"
-            placeholder="Descrição do pedido…"
-            value={novoPedido}
-            onChange={e => setNovoPedido(e.target.value)}
-          />
+          <input className="novo-pedido-input" placeholder="Descrição do pedido…" value={novoPedido} onChange={e => setNovoPedido(e.target.value)} />
           <button type="submit" className="btn-primary">+ Adicionar</button>
         </form>
       </div>

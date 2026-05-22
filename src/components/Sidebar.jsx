@@ -1,4 +1,4 @@
-export default function Sidebar({ activePage, onNavigate, balcao }) {
+export default function Sidebar({ activePage, onNavigate }) {
   const navItems = [
     { id: 'pedidos',       label: 'PEDIDOS'       },
     { id: 'configuracoes', label: 'CONFIGURAÇÕES' },
@@ -10,7 +10,6 @@ export default function Sidebar({ activePage, onNavigate, balcao }) {
         <span className="sidebar-logo">🔔</span>
         <div>
           <div className="sidebar-title">Pager</div>
-          <div className="sidebar-sub">{balcao}</div>
         </div>
       </div>
 

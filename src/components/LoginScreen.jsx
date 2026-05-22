@@ -16,7 +16,6 @@ export default function LoginScreen({ onLogin }) {
   return (
     <div className="auth-bg">
       <div className="auth-card">
-        {/* Ícone central */}
         <div className="auth-icon-wrap">
           <IconLock size={56} color="#FFB800" />
         </div>
@@ -25,29 +24,14 @@ export default function LoginScreen({ onLogin }) {
         <p className="auth-subtitle">Faça login para continuar</p>
 
         <form onSubmit={handleSubmit} className="auth-form">
-          {/* Usuário */}
           <div className="input-group">
             <span className="input-icon"><IconUser size={18} /></span>
-            <input
-              className="auth-input"
-              type="text"
-              placeholder="Usuário"
-              value={usuario}
-              onChange={e => setUsuario(e.target.value)}
-              autoFocus
-            />
+            <input className="auth-input" type="text" placeholder="Usuário" value={usuario} onChange={e => setUsuario(e.target.value)} autoFocus />
           </div>
 
-          {/* Senha */}
           <div className="input-group">
             <span className="input-icon"><IconLock size={18} /></span>
-            <input
-              className="auth-input"
-              type="password"
-              placeholder="Senha"
-              value={senha}
-              onChange={e => setSenha(e.target.value)}
-            />
+            <input className="auth-input" type="password" placeholder="Senha" value={senha} onChange={e => setSenha(e.target.value)} />
           </div>
 
           <button type="submit" className="btn-primary btn-full">
